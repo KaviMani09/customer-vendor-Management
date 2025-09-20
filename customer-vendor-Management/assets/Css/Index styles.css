@@ -1,0 +1,355 @@
+/* Customer and Vendors  css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    background: #E6F0FA;
+    color: #0f1724;
+}
+
+a {
+    color: #1e6cbb;
+    text-decoration: none;
+}
+
+input,
+select,
+button {
+    padding: 8px 12px;
+    margin: 8px 6px 8px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+button {
+    background-color: #1e6cbb;
+    color: white;
+    cursor: pointer;
+}
+
+.button-group {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e2e8f0;
+    color: #1e293b;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #cbd5e1;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.btn.primary {
+    background-color: #1e6cbb;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #155fa0;
+    color: white;
+}
+
+button:focus,
+input:focus,
+select:focus {
+    outline: 2px solid #2563eb;
+}
+
+.error {
+    color: red;
+}
+
+/* Layout */
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.hero-card {
+    width: min(1200px, 96%);
+    background-image: url('../Image/Image\ 1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(12, 28, 52, 0.12);
+    overflow: hidden;
+    position: relative;
+    padding: 48px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 32px;
+}
+
+.hero-card-1 {
+    background-image: url('../Image/Image\ 3.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.illustration {
+    border-radius: 14px;
+    min-height: 180px;
+    position: relative;
+}
+
+.overlay-card {
+    position: absolute;
+    top: 12%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 60%;
+    background-image: url('../Image/Image\ 4.jpeg');
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 8px 22px rgba(7, 18, 36, 0.06);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(15, 23, 36, 0.04);
+    text-align: center;
+}
+
+.overlay-1 {
+    background-image: url('../Image/Image\ 2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.overlay-card p {
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1.4;
+}
+
+.hero-title {
+    text-align: center;
+}
+
+.actions {
+    margin: 16px 0;
+    font-size: 0.95rem;
+}
+
+/* Table */
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(7, 18, 36, 0.04);
+    border: 1px solid rgba(15, 23, 36, 0.04);
+}
+
+.preview-table th {
+    background: #1e6cbb;
+    color: white;
+}
+
+.preview-table th,
+.preview-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(15, 23, 36, 0.08);
+}
+
+.preview-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.preview-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 24px;
+}
+
+/* -------- Media Queries -------- */
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+        font-size: 0.9rem;
+    }
+
+    .wrap {
+        padding: 10px;
+    }
+
+    .hero-card {
+        padding: 20px;
+        grid-template-rows: auto 1fr auto;
+        gap: 20px;
+    }
+
+    .overlay-card {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 12px;
+    }
+
+    .overlay-card h1 {
+        font-size: 1.2rem;
+    }
+
+    .overlay-card p {
+        font-size: 0.85rem;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .preview-table th,
+    .preview-table td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .preview-table {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .button-group a.btn {
+        text-align: center;
+    }
+
+    .actions {
+        font-size: 0.85rem;
+    }
+
+    .back-link {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-card {
+        padding: 30px;
+        grid-template-rows: auto 1fr auto;
+        gap: 25px;
+    }
+
+    .overlay-card {
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        margin-top: -30px;
+    }
+
+    input,
+    select,
+    button {
+        width: 48%;
+        margin-bottom: 8px;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .preview-table th,
+    .preview-table td {
+        padding: 10px 8px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .hero-card {
+        padding: 40px;
+    }
+
+    .overlay-card {
+        width: 100%;
+        left: 50%;
+        padding: 16px;
+    }
+
+    input,
+    select,
+    button {
+        width: auto;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .preview-table th,
+    .preview-table td {
+        padding: 10px 12px;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .hero-card {
+        padding: 48px;
+    }
+
+    .overlay-card {
+        width: 60%;
+        padding: 18px;
+    }
+
+    .preview-table th,
+    .preview-table td {
+        padding: 12px 14px;
+    }
+}
